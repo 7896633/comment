@@ -26,9 +26,12 @@ const PostPage = () => {
             </Head>
 
             <main className='relative max-w-[1400px] mx-auto'>
+                {/*侧边栏*/}
                 <Sidebar />
                 <div className='flex gap-6'>
+                    {/*中间内容部分*/}
                     <SinglePost />
+                    {/*右边*/}
                     <Trending />
                     {/*评论*/}
                     {appContext?.isModalOpen && <Modal />}

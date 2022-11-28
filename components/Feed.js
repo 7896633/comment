@@ -29,7 +29,7 @@ const Feed = () => {
                 Home
                 <HiOutlineSparkles />
             </div>
-
+            {/*发送栏*/}
             <Input />
             {posts.map((post) => (
                 <motion.div
@@ -38,6 +38,7 @@ const Feed = () => {
                 animate={{opacity:1}}
                 exit={{opacity:0}}
                 >
+                    {/*内容*/}
                     <Post key={post.id} id={post.id} post={post.data()} />
                 </motion.div>
             ))}

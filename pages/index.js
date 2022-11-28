@@ -30,6 +30,7 @@ export default function Home() {
                 <div className='flex gap-6'>
                     {/*内容*/}
                     <Feed />
+                    {/*右*/}
                     <Trending />
                     {appContext?.isModalOpen && <Modal />}
 

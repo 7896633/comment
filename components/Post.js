@@ -76,6 +76,7 @@ const Post = ({ id, post }) => {
     }
 
     return (
+                                                                                        // 点击前往对应id页
         <div className='mt-4 border-t border-gray-500 px-4 pt-6 pb-4 cursor-pointer' onClick={() => router.push(`/${id}`)}>
             <div className='grid grid-cols-[48px,1fr] gap-4'>
 
@@ -87,26 +88,26 @@ const Post = ({ id, post }) => {
                     <div className='block sm:flex gap-1'>
                         <h1 className='font-medium'>{post?.username}</h1>
 
+                        {/*名字*/}
                         <div className='flex'>
                             <p className='text-gray-500'>@{post?.tag} &nbsp;·&nbsp;</p>
                             <p className='text-gray-500'>
                                 <Moment fromNow locale="zh-CN" tz="Asia/Chongqing">{post?.timestamp?.toDate()}</Moment>
                             </p>
                         </div>
-
-
                     </div>
+
+                    {/*发送的文本*/}
                     <p>{post?.text}</p>
                     <img
                         className='max-h-[450px] object-cover rounded-[20px] mt-2'
                         src={post?.image}
-                        alt="" />
+                        alt=""
+                    />
 
-
+                    {/*评论数量显示*/}
                     <div className='flex justify-between text-[20px] mt-4 w-[80%]'>
-
                         <div className='flex gap-1 items-center'>
-
                             <BsChat className='hoverEffect w-7 h-7 p-1' onClick={(e) => {
                                 e.stopPropagation()
                                 openModal()
